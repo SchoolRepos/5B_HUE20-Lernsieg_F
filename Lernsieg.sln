@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegBackend", "LernsiegBackend\LernsiegBackend.csproj", "{35EA6C01-C949-47C4-8687-CF6800B6B924}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegDatabase", "LernsiegDatabase\LernsiegDatabase.csproj", "{1DDAE172-3122-427D-9EED-89F013F74B0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{35EA6C01-C949-47C4-8687-CF6800B6B924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35EA6C01-C949-47C4-8687-CF6800B6B924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35EA6C01-C949-47C4-8687-CF6800B6B924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
