@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegBackend", "Lernsieg
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegDatabase", "LernsiegDatabase\LernsiegDatabase.csproj", "{1DDAE172-3122-427D-9EED-89F013F74B0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegWPF", "LernsiegWPF\LernsiegWPF.csproj", "{8F0FE35D-E1F0-490A-8E34-FF67F0EA9BE0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DDAE172-3122-427D-9EED-89F013F74B0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8F0FE35D-E1F0-490A-8E34-FF67F0EA9BE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F0FE35D-E1F0-490A-8E34-FF67F0EA9BE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F0FE35D-E1F0-490A-8E34-FF67F0EA9BE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F0FE35D-E1F0-490A-8E34-FF67F0EA9BE0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
