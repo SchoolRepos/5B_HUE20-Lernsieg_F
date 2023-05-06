@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using LernsiegDatabase.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace LernsiegDatabase;
 

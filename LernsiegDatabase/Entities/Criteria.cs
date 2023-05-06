@@ -1,20 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LernsiegDatabase;
+namespace LernsiegDatabase.Entities;
 
-public class Evaluation
+public class Criteria
 {
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public int Id { get; set; }
-
-    public int SchoolOrTeacherId { get; set; }
 
     /// <summary>
     /// Die Spalte EvaluationType hat den Wert 1 für Schule und 2 für Lehrer.
     /// </summary>
     public int EvaluationType { get; set; }
+
+    public int SequenceNr { get; set; }
     
-    public string PhoneNr { get; set; }
-    
-    public List<EvaluationItem> EvaluationItems { get; set; }
+    public string Description { get; set; }
 }

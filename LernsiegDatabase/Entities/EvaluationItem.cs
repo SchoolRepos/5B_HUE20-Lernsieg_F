@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace LernsiegDatabase;
+namespace LernsiegDatabase.Entities;
 
 public class EvaluationItem
 {
