@@ -17,4 +17,8 @@ export class LoginComponent implements OnInit {
     localStorage["username"] = "admin";
     this.notifier.publish("Logging in as admin")
   }
+
+  logout() {
+    delete localStorage["username"]
+  }
 }

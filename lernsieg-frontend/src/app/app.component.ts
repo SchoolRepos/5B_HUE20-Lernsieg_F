@@ -5,7 +5,10 @@ import {NotifierServiceService} from "./notifier-service.service";
   selector: 'app-root',
   template: `
     LernsiegFrontend
-    <br/>
+    <hr/>
+    <button routerLink="/login">Login</button>
+    <button routerLink="/admin-panel">Admin Panel</button>
+    <hr/>
     Log:
     <div *ngFor="let message of logMessages">
       {{message}}
