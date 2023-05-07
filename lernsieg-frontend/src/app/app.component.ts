@@ -8,6 +8,7 @@ import {NotifierServiceService} from "./notifier-service.service";
     <hr/>
     <button routerLink="/login">Login</button>
     <button routerLink="/admin-panel">Admin Panel</button>
+    <button routerLink="/long/url/to/admin/panel">Admin Panel long url</button>
     <hr/>
     Log:
     <div *ngFor="let message of logMessages">

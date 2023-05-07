@@ -8,6 +8,7 @@ import {NotFoundComponent} from "./not-found/not-found.component";
 const routes: Routes = [
     {path: "login", component: LoginComponent},
     {path: "admin-panel", component: AdminPanelComponent, canActivate: [LoginGuard]},
+    {path: "long/url/to/admin/panel", component: AdminPanelComponent, canActivate: [LoginGuard]},
     {path: "**", component: NotFoundComponent}
 ];
 
