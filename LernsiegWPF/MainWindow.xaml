@@ -24,6 +24,7 @@
         
         <DataGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                   ItemsSource="{Binding Schools}"
+                  IsReadOnly="True"
                   SelectedItem="{Binding SelectedSchool}">
             
         </DataGrid>
@@ -38,7 +39,7 @@
         <Label Grid.Row="3" Grid.Column="0">Schule</Label>
         <Label Grid.Row="4" Grid.Column="0">Adresse</Label>
         
-        <TextBox Grid.Row="1" Grid.Column="1" />
+        <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding SelectedSchool.SchoolNumber, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
         <TextBox Grid.Row="2" Grid.Column="1" />
         <TextBox Grid.Row="3" Grid.Column="1" />
         <TextBox Grid.Row="4" Grid.Column="1" />

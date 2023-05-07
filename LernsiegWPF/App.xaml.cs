@@ -1,17 +1,49 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
+using LernsiegDatabase;
+using LernsiegViewModels;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 
-namespace LernsiegWPF
+namespace LernsiegWPF;
+
+public partial class App
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
-    public partial class App : Application
+    private readonly IHost _host;
+
+    public App() =>
+        _host = Host.CreateDefaultBuilder()
+            .ConfigureServices((ctx, services) => ConfigureServices(ctx.Configuration, services))
+            .Build();
+
+    private static void ConfigureServices(IConfiguration configuration, IServiceCollection services)
     {
+        services.AddSingleton<MainWindow>();
+        services.AddSingleton<MainViewModel>();
+        services.AddDbContext<LernsiegContext>(
+            x => x.UseSqlite(configuration.GetConnectionString("sqlite"))
+        );
+    }
+
+    protected override async void OnStartup(StartupEventArgs e)
+    {
+        await _host.StartAsync();
+
+        var context = _host.Services.GetRequiredService<LernsiegContext>();
+        context.Database.EnsureDeleted();
+        context.Database.EnsureCreated();
+        DatabaseSeeder.Seed(context);
+
+        var mainWindow = _host.Services.GetRequiredService<MainWindow>();
+        mainWindow.Show();
+        base.OnStartup(e);
+    }
+
+    protected override async void OnExit(ExitEventArgs e)
+    {
+        using (_host)
+            await _host.StopAsync();
+        base.OnExit(e);
     }
 }
