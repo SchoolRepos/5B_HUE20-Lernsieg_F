@@ -20,5 +20,6 @@ export class LoginComponent implements OnInit {
 
   logout() {
     delete localStorage["username"]
+    this.notifier.publish("Logout")
   }
 }
