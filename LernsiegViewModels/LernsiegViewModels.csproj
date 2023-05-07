@@ -7,6 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\LernsiegDatabase\LernsiegDatabase.csproj" />
       <ProjectReference Include="..\MvvmTools\MvvmTools.csproj" />
     </ItemGroup>
 

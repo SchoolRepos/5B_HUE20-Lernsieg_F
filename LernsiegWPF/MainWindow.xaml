@@ -22,11 +22,14 @@
             <RowDefinition Height="30" />
         </Grid.RowDefinitions>
         
-        <DataGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2">
+        <DataGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding Schools}"
+                  SelectedItem="{Binding SelectedSchool}">
             
         </DataGrid>
         
-        <DataGrid Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2">
+        <DataGrid Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
+                  ItemsSource="{Binding Teachers}">
             
         </DataGrid>
         
