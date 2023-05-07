@@ -25,13 +25,22 @@
         <DataGrid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                   ItemsSource="{Binding Schools}"
                   IsReadOnly="True"
-                  SelectedItem="{Binding SelectedSchool}">
-            
+                  SelectedItem="{Binding SelectedSchool}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding SchoolNumber}" Header="Schulkennzahl" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Name" />
+            </DataGrid.Columns>
         </DataGrid>
         
         <DataGrid Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"
-                  ItemsSource="{Binding Teachers}">
-            
+                  IsReadOnly="True"
+                  ItemsSource="{Binding Teachers}"
+                  AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Title}" Header="Titel" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="Name" />
+            </DataGrid.Columns>
         </DataGrid>
         
         <Label Grid.Row="1" Grid.Column="0">Schulkennzahl</Label>
