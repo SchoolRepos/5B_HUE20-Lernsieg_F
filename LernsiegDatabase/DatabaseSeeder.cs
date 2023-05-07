@@ -37,8 +37,11 @@ public static class DatabaseSeeder
     public static void Seed(LernsiegContext context)
     {
         SeedSchools(context);
+        context.SaveChanges();
         SeedTeachers(context);
+        context.SaveChanges();
         SeedCriterias(context);
+        context.SaveChanges();
         SeedEvaluations(context);
         context.SaveChanges();
     }
@@ -69,7 +72,8 @@ public static class DatabaseSeeder
             {
                 Name = line[0],
                 Title = line[1],
-                SchoolId = Convert.ToInt32(line[2])
+                School = context.Schools
+                    .First(x => x.SchoolNumber == Convert.ToInt32(line[2]))
             });
         }
     }
@@ -101,7 +105,7 @@ public static class DatabaseSeeder
     private static void SeedEvaluations(LernsiegContext context)
     {
         var random = new Random(NumberOfEvaluations); // seeded to make it always produce the same output
-        
+
         for (var i = 0; i < NumberOfEvaluations; i++)
         {
             var isSchool = random.NextSingle() > 0.5;
