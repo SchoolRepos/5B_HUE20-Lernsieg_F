@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegWPF", "LernsiegWPF\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvvmTools", "MvvmTools\MvvmTools.csproj", "{709ABBD9-C203-4051-A5B7-89638471460F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LernsiegViewModels", "LernsiegViewModels\LernsiegViewModels.csproj", "{89F5E15B-246B-4CC3-B5C4-242743A1FE0B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{709ABBD9-C203-4051-A5B7-89638471460F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{709ABBD9-C203-4051-A5B7-89638471460F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{709ABBD9-C203-4051-A5B7-89638471460F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89F5E15B-246B-4CC3-B5C4-242743A1FE0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89F5E15B-246B-4CC3-B5C4-242743A1FE0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89F5E15B-246B-4CC3-B5C4-242743A1FE0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89F5E15B-246B-4CC3-B5C4-242743A1FE0B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
